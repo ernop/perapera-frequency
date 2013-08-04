@@ -19,6 +19,6 @@ I picked these levels to be meaningful and they are - For intermediate students,
 
 And in general it's not efficient to spend time memorizing words which appear 1 time per million words when there are words that appear 50 times/ mil which you don't know.
 
-![ScreenShot](https://raw.github.com/ernop/perapera-frequency/master/common.png)
+![ScreenShot](https://raw.github.com/ernop/perapera-frequency/blob/master/common.png)
 
-![ScreenShot](https://raw.github.com/ernop/perapera-frequency/master/common2.png)
+![ScreenShot](https://raw.github.com/ernop/perapera-frequency/blob/master/veryrare.png)
