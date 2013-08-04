@@ -6,6 +6,8 @@ Add word frequency information to you pera-pera kun popup Chinese dictionary.
 
 This python program will look in a local corpus and append word frequency descriptions to the end of the pera-pera definitions.
 
+*Note: this only works for firefox at the moment.*
+
 the levels are
 
     levels={200:'very basic', #1-477                 = 500                          cum 500
@@ -30,3 +32,22 @@ And in general it's not efficient to spend time memorizing words which appear 1 
 The corpus
 ----------------------------
 is compiled from a bunch of internet sources & seems fairly accurate to what I've read.  It's a lot better than the business / news derived ones I've read.
+
+Howto
+-----------------
+I added modified-dict.sqlite which already has the annotations.  
+
+1. close firefox
+
+2. find your firefox folder something like c:\users\<username>\AppData\Roaming\Mozilla\Firefox\Profiles\<random name>\extensions\chineseperakun@gmail.com
+
+3. copy the modified-dict.sqlite folder in there
+
+4. rename to dict.sqlite (after renaming the other one!)
+
+5. test it - it should work immediately after you restart firefox
+
+
+Howto make your own
+---------------------------------
+I also included the script to modify the dictionary in place, but most of the time that'll be unnecessary to use.
