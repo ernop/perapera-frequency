@@ -33,7 +33,7 @@ levels={200:'very basic', #1-477                    = 500                       
         0:'obscure'}              #18600-50000       = 31400                      50000
         
 slevels=sorted(levels.items())
-words=[w.upper() for w in levels.values()]
+words=sorted([w.upper() for w in levels.values()],key=lambda x:-1*len(x))
 
 for ii,line in enumerate(blob):
         line=line.strip()
