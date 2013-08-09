@@ -36,6 +36,7 @@ slevels=sorted(levels.items(),key=lambda x:-1*x[0])
 words=sorted([w.upper() for w in levels.values()],key=lambda x:-1*len(x))
 
 for ii,line in enumerate(blob):
+	
     line=line.strip()
     if line.count(' ')!=2:
         continue
@@ -54,12 +55,16 @@ for ii,line in enumerate(blob):
             w=w.upper()
             entry=entry.replace(' '+w,'')
         newentry=entry.strip().replace('"','')+' '+description.upper()
-        sql='update dict set entry="%s" where simp="%s"'%(newentry,char)
+        sql='update dict set entry="%s" where simp="%s" and entry="%s"'%(newentry,char,entry.replace('"','""'))
+        #fixed this to let it display multiple entries again...
         if ii%100==0:
             print repr(sql)
             print ii
         ii+=1
-        cur.execute(sql)
+        try:
+            cur.execute(sql)
+        except:
+            import ipdb;ipdb.set_trace()
     else:
         #word was in internet-freq but not pera pera dict
         pass
